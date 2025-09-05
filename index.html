@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OrangeGram Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="chat">
+    <h1>💬 OrangeGram Chat</h1>
+
+    <div id="auth">
+        <input type="text" id="username" placeholder="Ваше имя">
+        <button onclick="login()">Войти в чат</button>
+    </div>
+
+    <div id="chat-window" style="display:none">
+        <div id="messages"></div>
+        <div id="input-area">
+            <input type="text" id="message-input" placeholder="Сообщение...">
+            <button onclick="sendMessage()">Отправить</button>
+        </div>
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
