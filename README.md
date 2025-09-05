@@ -1,1 +1,1 @@
-"# OrangeGram - Decentralized Messenger" 
+"# OrangeGram -  Messenger" 
