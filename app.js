@@ -7,8 +7,8 @@ function login() {
         document.getElementById('auth').style.display = 'none';
         document.getElementById('chat-window').style.display = 'block';
 
-        // Подключись к серверу
-        socket = io('https://api.orangegram.dpdns.org');
+// В client/app.js вместо api.orangegram.dpdns.org
+        const socket = io('https://orangegram-chat-server.onrender.com');
 
         // Слушай сообщения
         socket.on('message-history', (messages) => {
@@ -40,4 +40,5 @@ function addMessage(message) {
     messageEl.innerHTML = `<strong>${message.user}:</strong> ${message.text} <em>(${message.time})</em>`;
     messagesDiv.appendChild(messageEl);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
 }
